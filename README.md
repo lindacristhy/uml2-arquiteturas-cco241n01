@@ -5,16 +5,16 @@
 
 ## Equipe
 
-**Nome do time:** ____________________  
-**Modelo escolhido:** ___ (1 a 5)
+**Nome do time:** Tartarugas Ninja
+**Modelo escolhido:** 5 (1 a 5)
 
 | Nome | Usuário do GitHub |
 | --- | --- |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
+|Eduardo Alves |eduardoal01|
+|Linda |lindacristhy|
+|Ana |Ana34fd|
+|Willames |Williames-C|
+|Ryan Yuri|ryan-yuri|
 
 ## Modelos
 
