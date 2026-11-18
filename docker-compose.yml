@@ -1,0 +1,33 @@
+# Chat em tempo real — arquitetura cliente-servidor
+#
+#   docker compose up --build                      sobe o servidor (porta 5000)
+#   docker compose run --rm demo                   executa o fluxo principal (gera os logs do LOGS.md)
+#   docker compose run --rm cliente --usuario ana  abre um cliente de terminal interativo
+#
+# O cliente gráfico (servicos/cliente-gui) roda fora do Docker, porque abre uma janela:
+#   python servicos/cliente-gui/cliente_gui.py
+
+services:
+  servidor:
+    build: ./servicos/servidor
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
+
+  demo:
+    build: ./servicos/cliente
+    command: ["python", "demo.py"]
+    depends_on:
+      servidor:
+        condition: service_healthy
+    profiles: ["clientes"]
+
+  cliente:
+    build: ./servicos/cliente
+    entrypoint: ["python", "cliente.py"]
+    stdin_open: true
+    tty: true
+    depends_on:
+      servidor:
+        condition: service_healthy
+    profiles: ["clientes"]

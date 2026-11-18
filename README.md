@@ -51,9 +51,67 @@ Cada modelo pode ser escolhido por **uma equipe só**. A descrição completa de
 
 **Cada integrante deve ter pelo menos 3 commits** com mensagens claras.
 
+## Nosso sistema: chat em tempo real (cliente-servidor)
+
+Um **servidor central** em Python recebe as mensagens dos clientes por TCP e as repassa na hora para todos da mesma sala. Os clientes nunca falam entre si, só com o servidor.
+
+![Arquitetura](docs/arquitetura.png)
+
+| Componente | Pasta | O que faz |
+| --- | --- | --- |
+| Servidor | [`servicos/servidor`](servicos/servidor) | Salas, usuários online, histórico das últimas 50 mensagens, difusão em tempo real, validação e heartbeat |
+| Cliente de terminal | [`servicos/cliente`](servicos/cliente) | Chat no terminal com reconexão automática + roteiro `demo.py` do fluxo principal |
+| Cliente gráfico | [`servicos/cliente-gui`](servicos/cliente-gui) | Janela de chat em Tkinter, com lista de online e aviso de "digitando..." |
+
+Tudo em **Python**, usando só a biblioteca padrão (nada de `pip install`).
+Documentação: [requisitos](docs/requisitos.md) · [arquitetura e protocolo](docs/arquitetura.md) · [diagrama de sequência](docs/sequencia.png) · [logs do fluxo principal](LOGS.md)
+
 ## Como rodar
 
-(A equipe preenche: o comando para subir o sistema e como executar o fluxo principal.)
+Pré-requisito: [Docker](https://www.docker.com/products/docker-desktop/) instalado e aberto.
+
+**1. Subir o sistema (um comando):**
+
+```
+docker compose up --build
+```
+
+O servidor fica escutando na porta **5000**. O build também roda os testes automáticos do servidor.
+
+**2. Executar o fluxo principal** (em outro terminal, na mesma pasta):
+
+```
+docker compose run --rm demo
+```
+
+Três usuários (ana, bruno e carla) conversam na sala `geral`; cada passo é conferido e o resultado aparece no final (`RESULTADO: fluxo principal concluído com sucesso`). Os logs desse fluxo estão no [`LOGS.md`](LOGS.md).
+
+**3. Conversar de verdade** (opcional; abra dois terminais com nomes diferentes):
+
+```
+docker compose run --rm cliente --usuario ana
+docker compose run --rm cliente --usuario bruno
+```
+
+Ou pela janela gráfica (precisa de Python 3 instalado no computador):
+
+```
+python servicos/cliente-gui/cliente_gui.py
+```
+
+**Parar tudo:** `Ctrl+C` no terminal do servidor, ou `docker compose down`.
+
+<details>
+<summary>Sem Docker (só Python 3.10+)</summary>
+
+```
+python servicos/servidor/servidor.py
+python servicos/cliente/demo.py
+python servicos/cliente/cliente.py --usuario ana
+```
+
+Testes do servidor: `python -m unittest discover -s servicos/servidor/tests -v`
+</details>
 
 ## Entrega
 
