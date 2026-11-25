@@ -17,6 +17,6 @@ Os usuários conversam em salas; o servidor central recebe cada mensagem e a rep
 
 | ID | Requisito |
 | --- | --- |
-| RNF01 |  |
-| RNF02 |  |
-| RNF03 |  |
+| RNF01 | **Desempenho:** uma mensagem deve chegar aos demais participantes da sala em menos de 1 segundo numa rede local. |
+| RNF02 | **Confiabilidade:** o servidor deve validar todo dado recebido (formato JSON, tamanho e caracteres) e recusar entradas inválidas com uma mensagem de erro, sem cair. Conexões que param de responder devem ser encerradas em até 45 segundos (heartbeat), e o cliente deve tentar reconectar sozinho se a conexão cair. |
+| RNF03 | **Portabilidade:** o sistema deve subir com um único comando (`docker compose up --build`) em qualquer máquina com Docker, e os componentes devem usar apenas a biblioteca padrão do Python 3.12, sem dependências externas. |
