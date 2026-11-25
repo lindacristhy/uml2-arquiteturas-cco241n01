@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1540" height="920" viewBox="0 0 1540 920">
+<defs>
+  <marker id="cheia" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#334155"/></marker>
+  <marker id="aberta" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10" fill="none" stroke="#334155" stroke-width="1.4"/></marker>
+</defs>
+<rect width="1540" height="920" fill="#ffffff"/>
+<text x="770.0" y="44" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#1f2933">Chat em tempo real — Arquitetura Cliente-Servidor</text>
+<text x="770.0" y="70" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" text-anchor="middle" fill="#64748b">Modelo 5 · Tartarugas Ninja · Diagrama de componentes e implantação (UML)</text>
+<path d="M150,130 L164,116 L564,116 L550,130 z" fill="#dde4ee" stroke="#334155" stroke-width="1.5"/>
+<path d="M550,130 L564,116 L564,556 L550,570 z" fill="#d3dbe7" stroke="#334155" stroke-width="1.5"/>
+<rect x="150" y="130" width="400" height="440" fill="#eef2f7" stroke="#334155" stroke-width="1.5"/>
+<text x="164" y="152" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#64748b">«device»</text>
+<text x="164" y="172" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" text-anchor="start" fill="#1f2933">Computador do usuário</text>
+<path d="M150,640 L164,626 L564,626 L550,640 z" fill="#dde4ee" stroke="#334155" stroke-width="1.5"/>
+<path d="M550,640 L564,626 L564,826 L550,840 z" fill="#d3dbe7" stroke="#334155" stroke-width="1.5"/>
+<rect x="150" y="640" width="400" height="200" fill="#eef2f7" stroke="#334155" stroke-width="1.5"/>
+<text x="164" y="662" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#64748b">«execution environment»</text>
+<text x="164" y="682" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" text-anchor="start" fill="#1f2933">Contêiner Docker «demo»</text>
+<path d="M790,130 L804,116 L1504,116 L1490,130 z" fill="#dde4ee" stroke="#334155" stroke-width="1.5"/>
+<path d="M1490,130 L1504,116 L1504,706 L1490,720 z" fill="#d3dbe7" stroke="#334155" stroke-width="1.5"/>
+<rect x="790" y="130" width="700" height="590" fill="#eef2f7" stroke="#334155" stroke-width="1.5"/>
+<text x="804" y="152" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#64748b">«execution environment»</text>
+<text x="804" y="172" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" text-anchor="start" fill="#1f2933">Contêiner Docker «servidor» · python:3.12-slim</text>
+<rect x="180" y="205" width="340" height="135" rx="4" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+<rect x="492" y="215" width="20" height="24" fill="#fff" stroke="#334155" stroke-width="1.2"/>
+<rect x="486" y="219" width="12" height="5" fill="#fff" stroke="#334155" stroke-width="1.2"/>
+<rect x="486" y="229" width="12" height="5" fill="#fff" stroke="#334155" stroke-width="1.2"/>
+<text x="194" y="227" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#64748b">«component»</text>
+<text x="194" y="247" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" text-anchor="start" fill="#1f2933">cliente-gui</text>
+<text x="194" y="269" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#1f2933">Janela de chat (Python + Tkinter)</text>
+<text x="194" y="288" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#64748b">cliente_gui.py · interface.py · rede.py</text>
+<text x="194" y="307" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#64748b">lista de online · "digitando..."</text>
+<rect x="180" y="395" width="340" height="135" rx="4" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+<rect x="492" y="405" width="20" height="24" fill="#fff" stroke="#334155" stroke-width="1.2"/>
+<rect x="486" y="409" width="12" height="5" fill="#fff" stroke="#334155" stroke-width="1.2"/>
+<rect x="486" y="419" width="12" height="5" fill="#fff" stroke="#334155" stroke-width="1.2"/>
+<text x="194" y="417" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#64748b">«component»</text>
+<text x="194" y="437" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" text-anchor="start" fill="#1f2933">cliente (terminal)</text>
+<text x="194" y="459" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#1f2933">Chat no terminal (Python + asyncio)</text>
+<text x="194" y="478" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#64748b">cliente.py · conexao.py</text>
+<text x="194" y="497" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#64748b">reconexão automática</text>
+<rect x="180" y="705" width="340" height="110" rx="4" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+<rect x="492" y="715" width="20" height="24" fill="#fff" stroke="#334155" stroke-width="1.2"/>
+<rect x="486" y="719" width="12" height="5" fill="#fff" stroke="#334155" stroke-width="1.2"/>
+<rect x="486" y="729" width="12" height="5" fill="#fff" stroke="#334155" stroke-width="1.2"/>
+<text x="194" y="727" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#64748b">«component»</text>
+<text x="194" y="747" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" text-anchor="start" fill="#1f2933">demo</text>
+<text x="194" y="769" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#1f2933">Roteiro do fluxo principal</text>
+<text x="194" y="788" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#64748b">demo.py · gera os logs do LOGS.md</text>
+<rect x="930" y="195" width="430" height="135" rx="4" fill="#ffffff" stroke="#1b7f5a" stroke-width="2"/>
+<rect x="1332" y="205" width="20" height="24" fill="#fff" stroke="#334155" stroke-width="1.2"/>
+<rect x="1326" y="209" width="12" height="5" fill="#fff" stroke="#334155" stroke-width="1.2"/>
+<rect x="1326" y="219" width="12" height="5" fill="#fff" stroke="#334155" stroke-width="1.2"/>
+<text x="944" y="217" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#64748b">«component»</text>
+<text x="944" y="237" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" text-anchor="start" fill="#1b7f5a">Servidor de chat</text>
+<text x="944" y="259" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#1f2933">servidor.py · ServidorDeChat</text>
+<text x="944" y="278" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#64748b">aceita conexões TCP, trata comandos,</text>
+<text x="944" y="297" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#64748b">heartbeat (ping/pong) e desligamento limpo</text>
+<rect x="815" y="420" width="205" height="130" rx="4" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+<rect x="992" y="430" width="20" height="24" fill="#fff" stroke="#334155" stroke-width="1.2"/>
+<rect x="986" y="434" width="12" height="5" fill="#fff" stroke="#334155" stroke-width="1.2"/>
+<rect x="986" y="444" width="12" height="5" fill="#fff" stroke="#334155" stroke-width="1.2"/>
+<text x="829" y="442" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#64748b">«component»</text>
+<text x="829" y="462" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" text-anchor="start" fill="#1f2933">Protocolo</text>
+<text x="829" y="484" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#1f2933">protocolo.py</text>
+<text x="829" y="503" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#64748b">valida e codifica</text>
+<text x="829" y="522" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#64748b">o JSON</text>
+<rect x="1040" y="420" width="225" height="130" rx="4" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+<rect x="1237" y="430" width="20" height="24" fill="#fff" stroke="#334155" stroke-width="1.2"/>
+<rect x="1231" y="434" width="12" height="5" fill="#fff" stroke="#334155" stroke-width="1.2"/>
+<rect x="1231" y="444" width="12" height="5" fill="#fff" stroke="#334155" stroke-width="1.2"/>
+<text x="1054" y="442" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#64748b">«component»</text>
+<text x="1054" y="462" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" text-anchor="start" fill="#1f2933">Gerenciador de salas</text>
+<text x="1054" y="484" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#1f2933">salas.py</text>
+<text x="1054" y="503" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#64748b">online · histórico</text>
+<text x="1054" y="522" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#64748b">difusão</text>
+<rect x="1285" y="420" width="185" height="130" rx="4" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+<rect x="1442" y="430" width="20" height="24" fill="#fff" stroke="#334155" stroke-width="1.2"/>
+<rect x="1436" y="434" width="12" height="5" fill="#fff" stroke="#334155" stroke-width="1.2"/>
+<rect x="1436" y="444" width="12" height="5" fill="#fff" stroke="#334155" stroke-width="1.2"/>
+<text x="1299" y="442" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#64748b">«component»</text>
+<text x="1299" y="462" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" text-anchor="start" fill="#1f2933">Registro</text>
+<text x="1299" y="484" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#1f2933">registro.py</text>
+<text x="1299" y="503" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#64748b">logs de cada</text>
+<text x="1299" y="522" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#64748b">evento</text>
+<path d="M1085,600 L1085,680 A67.5,10 0 0 0 1220,680 L1220,600" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<ellipse cx="1152.5" cy="600" rx="67.5" ry="10" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<text x="1152.5" y="632" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#1f2933">Memória</text>
+<text x="1152.5" y="650" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="middle" fill="#64748b">salas + 50 últimas</text>
+<text x="1152.5" y="668" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="middle" fill="#64748b">msgs por sala</text>
+<line x1="1040" y1="330" x2="935" y2="420" stroke="#334155" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#aberta)"/>
+<rect x="946.2" y="360" width="43.6" height="18" fill="#fff" opacity="0.92"/><text x="968" y="372" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="middle" fill="#64748b">«use»</text>
+<line x1="1145" y1="330" x2="1150" y2="420" stroke="#334155" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#aberta)"/>
+<rect x="1128.2" y="368" width="43.6" height="18" fill="#fff" opacity="0.92"/><text x="1150" y="380" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="middle" fill="#64748b">«use»</text>
+<line x1="1250" y1="330" x2="1360" y2="420" stroke="#334155" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#aberta)"/>
+<rect x="1296.2" y="360" width="43.6" height="18" fill="#fff" opacity="0.92"/><text x="1318" y="372" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="middle" fill="#64748b">«use»</text>
+<line x1="1152" y1="550" x2="1152" y2="590" stroke="#334155" stroke-width="1.5" marker-end="url(#aberta)"/>
+<line x1="702" y1="380" x2="930" y2="262" stroke="#334155" stroke-width="1.5"/>
+<circle cx="690" cy="380" r="12" fill="#fff" stroke="#1b7f5a" stroke-width="2.4"/>
+<text x="690" y="302" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" fill="#1b7f5a">TCP :5000</text>
+<text x="690" y="320" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="middle" fill="#1b7f5a">JSON Lines</text>
+<text x="690" y="338" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="middle" fill="#64748b">1 mensagem JSON</text>
+<text x="690" y="354" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="middle" fill="#64748b">por linha (UTF-8)</text>
+<line x1="520" y1="272" x2="677" y2="375.68" stroke="#334155" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#aberta)"/>
+<line x1="520" y1="462" x2="677" y2="383.28" stroke="#334155" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#aberta)"/>
+<line x1="520" y1="760" x2="677" y2="395.2" stroke="#334155" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#aberta)"/>
+<rect x="549.76" y="284" width="70.48" height="18" fill="#fff" opacity="0.92"/><text x="585" y="296" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="middle" fill="#64748b">requisita</text>
+<rect x="798.2" y="300" width="43.6" height="18" fill="#fff" opacity="0.92"/><text x="820" y="312" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="middle" fill="#64748b">«TCP»</text>
+<circle cx="70" cy="300" r="12" fill="#fff" stroke="#334155" stroke-width="1.6"/>
+<line x1="70" y1="312" x2="70" y2="346" stroke="#334155" stroke-width="1.6"/>
+<line x1="50" y1="324" x2="90" y2="324" stroke="#334155" stroke-width="1.6"/>
+<line x1="70" y1="346" x2="54" y2="372" stroke="#334155" stroke-width="1.6"/>
+<line x1="70" y1="346" x2="86" y2="372" stroke="#334155" stroke-width="1.6"/>
+<text x="70" y="392" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1f2933">Usuário</text>
+<line x1="92" y1="330" x2="180" y2="272" stroke="#334155" stroke-width="1.5" marker-end="url(#aberta)"/>
+<line x1="92" y1="345" x2="180" y2="462" stroke="#334155" stroke-width="1.5" marker-end="url(#aberta)"/>
+<path d="M790,760 L1474,760 L1490,776 L1490,892 L790,892 z" fill="#fff8db" stroke="#b59f3b" stroke-width="1.2"/>
+<path d="M1474,760 L1474,776 L1490,776" fill="none" stroke="#b59f3b" stroke-width="1.2"/>
+<text x="806" y="786" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" text-anchor="start" fill="#1f2933">Estilo cliente-servidor</text>
+<text x="806" y="806" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#1f2933">• Os clientes só se comunicam com o servidor, nunca entre si.</text>
+<text x="806" y="826" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#1f2933">• O servidor é o ponto central: valida cada mensagem, guarda o</text>
+<text x="806" y="846" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#1f2933">  histórico e difunde (broadcast) para todos da mesma sala.</text>
+<text x="806" y="866" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#1f2933">• docker-compose publica a porta 5000 do contêiner no computador.</text>
+</svg>
