@@ -1,0 +1,101 @@
+COMO RODAR O CHAT EM TEMPO REAL (Tartarugas Ninja - Modelo 5)
+==============================================================
+
+Todos os comandos sao para o PowerShell, rodados dentro da pasta do projeto
+(uml2-arquiteturas-cco241n01). O projeto nao precisa de "pip install": usa so o
+que ja vem com o Python.
+
+
+--------------------------------------------------------------
+OPCAO 1: COM DOCKER
+--------------------------------------------------------------
+Precisa: Docker Desktop instalado e aberto.
+
+1) Subir o servidor (terminal 1, deixe aberto):
+
+   docker compose up --build
+
+   O servidor fica na porta 5000. O build tambem roda os testes do servidor.
+
+2) Rodar o fluxo principal (terminal 2):
+
+   docker compose run --rm demo
+
+   No final tem que aparecer:
+   RESULTADO: fluxo principal concluido com sucesso (14 verificacoes OK).
+
+3) Conversar pelo terminal (um terminal para cada pessoa, nomes diferentes):
+
+   docker compose run --rm cliente --usuario ana
+   docker compose run --rm cliente --usuario bruno
+
+4) Ver os logs do servidor:
+
+   docker compose logs servidor
+
+5) Parar tudo:
+
+   Ctrl+C no terminal 1, ou:
+   docker compose down
+
+
+--------------------------------------------------------------
+OPCAO 2: SEM DOCKER (so Python 3.10 ou mais novo)
+--------------------------------------------------------------
+Em CADA terminal novo, ative o venv primeiro:
+
+   .venv\Scripts\Activate.ps1
+
+   (Se der erro de "execucao de scripts desabilitada", rode uma vez:
+    Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+    e ative de novo.)
+
+1) Subir o servidor (terminal 1, deixe aberto):
+
+   python servicos/servidor/servidor.py
+
+2) Rodar o fluxo principal (terminal 2):
+
+   python servicos/cliente/demo.py
+
+   No final tem que aparecer:
+   RESULTADO: fluxo principal concluido com sucesso (14 verificacoes OK).
+
+3) Conversar pela janela grafica (um terminal para cada pessoa):
+
+   python servicos/cliente-gui/cliente_gui.py --usuario ana --sala geral
+   python servicos/cliente-gui/cliente_gui.py --usuario bruno --sala geral
+
+4) Ou conversar pelo terminal:
+
+   python servicos/cliente/cliente.py --usuario ana --sala geral
+
+   Comandos dentro do chat: /usuarios   /sala <nome>   /ajuda   /sair
+
+5) Rodar os testes do servidor:
+
+   python -m unittest discover -s servicos/servidor/tests -v
+
+6) Parar o servidor:
+
+   Ctrl+C no terminal 1.
+
+
+--------------------------------------------------------------
+JANELA GRAFICA COM O SERVIDOR NO DOCKER
+--------------------------------------------------------------
+A janela grafica nao roda dentro do Docker (ela abre uma janela no
+computador). Com o servidor subido pela Opcao 1, abra a janela com Python:
+
+   python servicos/cliente-gui/cliente_gui.py --usuario ana --sala geral
+
+
+--------------------------------------------------------------
+PROBLEMAS COMUNS
+--------------------------------------------------------------
+- Erro de porta em uso (WinError 10048 ou "address already in use"):
+  ja tem um servidor rodando na porta 5000.
+  Feche o outro terminal ou rode "docker compose down".
+- O demo ou o cliente nao conecta: confira se o servidor do passo 1 esta
+  rodando antes de abrir os clientes.
+- "NOME_EM_USO": ja tem alguem com esse nome na sala. Use outro nome.
